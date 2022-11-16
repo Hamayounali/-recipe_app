@@ -4,11 +4,27 @@
 
 <div id="recipes">
   <% @recipes.each do |recipe| %>
-    <%= render recipe %>
+  <div>
+  <%= recipe.name %>
+  </div>
+  <div>
+  <%= recipe.preparation_time %>
+  </div>
+  <div>
+  <%= recipe.cooking_time %>
+  <div>
+  <%= recipe.description %>
+  </div>
+  <div>
+  <%= recipe.public %>
+  </div>
+  </div>
+   
     <p>
+    <%= button_to "Destroy this recipe", @recipe, method: :delete %>
       <%= link_to "Show this recipe", recipe %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New recipe", new_recipe_path %>
+<%# <%= link_to "New recipe", new_recipe_path(@recipes) %>
