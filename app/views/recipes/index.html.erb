@@ -1,30 +1,23 @@
+<div class="container-fluid d-grid w-80 align-items-center justify-content-center" id="recip">
 <p style="color: green"><%= notice %></p>
 
 <h1>Recipes</h1>
 
-<div id="recipes">
+ <div id="recipes">
   <% @recipes.each do |recipe| %>
-  <div>
-  <%= recipe.name %>
-  </div>
-  <div>
-  <%= recipe.preparation_time %>
-  </div>
-  <div>
-  <%= recipe.cooking_time %>
-  <div>
-  <%= recipe.description %>
-  </div>
-  <div>
-  <%= recipe.public %>
-  </div>
-  </div>
-   
-    <p>
-    <%= button_to "Destroy this recipe", @recipe, method: :delete %>
-      <%= link_to "Show this recipe", recipe %>
-    </p>
+
+
+   <div class="cardss d-grid w-100">
+    <div class="card float-left w-40" id="recip-card-left">
+      <h3><%= recipe.name %></h3>
+    <span class="border-less"><%= button_to "Remove", recipe, method: :delete %></span><br>
+      <%= link_to "Show this recipe", recipe %><br>
+      <%= link_to "new recipe", new_recipe_path %>
+    </div>
+      <div class="card float-right w-60" id="recip-card-right"> cooking process: <%= recipe.description %></div>
+</div>
   <% end %>
+ </div>
 </div>
 
 <%# <%= link_to "New recipe", new_recipe_path(@recipes) %>
