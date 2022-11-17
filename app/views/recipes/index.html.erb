@@ -1,3 +1,10 @@
+<%= render "shared/nav" %>
+<div class="container">
+
+ <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn btn-primary'%>
+
+
+
 <p style="color: green"><%= notice %></p>
 
 <h1>Recipes</h1>
@@ -26,5 +33,5 @@
     </p>
   <% end %>
 </div>
-
+</div>
 <%# <%= link_to "New recipe", new_recipe_path(@recipes) %>
