@@ -9,11 +9,7 @@ Rails.application.routes.draw do
   root to: 'recipes#index'
 
   # get 'recipe_food/quantity:integer'
-  resources :foods
-  resources :recipes
-  resources :public_recipes
-  resources :shopping_list
-  resources :recipe_foods
+  resources :users, :foods, :recipes, :public_recipes, :shopping_list, :recipe_foods
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   # Defines the root path route ("/")
 end
