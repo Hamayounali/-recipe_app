@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class FoodsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_food, only: %i[index show edit update destroy]
