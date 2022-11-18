@@ -15,14 +15,14 @@
  */
 
 .newFood {
-text-align: right;
+  text-align: right;
 }
 
 a {
   text-decoration: none;
 }
 
-#recip  {
+#recip {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -30,16 +30,15 @@ a {
 
 .cardss {
   display: grid;
-  grid-template-columns:  1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   border: 2px solid #333;
   width: 100%;
-
 }
 
- /* public recipes starts here **/
+/* public recipes starts here **/
 #li-cards {
   display: grid;
-  grid-template-columns: 1fr ;
+  grid-template-columns: 1fr;
   grid-column-gap: 10px;
 }
 
