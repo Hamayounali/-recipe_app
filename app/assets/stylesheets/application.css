@@ -14,26 +14,27 @@
  *= require_self
  */
 
- .newFood {
-  text-align: right;
- }
- a {
-   text-decoration: none;
- }
+.newFood {
+text-align: right;
+}
 
- #recip  {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-around;
- }
+a {
+  text-decoration: none;
+}
 
- .cardss {
-    display: grid;
-    grid-template-columns:  1fr 1fr;
-    border: 2px solid #333;
-    width: 100%;
+#recip  {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
- }
+.cardss {
+  display: grid;
+  grid-template-columns:  1fr 1fr;
+  border: 2px solid #333;
+  width: 100%;
+
+}
 
  /* public recipes starts here **/
 #li-cards {
@@ -43,13 +44,12 @@
 }
 
 #card-body {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    border: 1.6px solid #333;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1.6px solid #333;
   grid-row-gap: 60px;
 }
 
 #card1 {
-    
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
