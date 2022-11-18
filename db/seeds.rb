@@ -12,3 +12,5 @@ User.create(name: "Ali")
 Recipe.create!(name: "Pasta", preparation_time: '100s', cooking_time: '200s', description: "Cook pasta", public: true, user_id: 1)
 Recipe.create!(name: "Jollof Rice", preparation_time: '100s', cooking_time: '200s', description: "Cook Rice", public: true, user_id: 1)
 Recipe.create!(name: "Banga Rice", preparation_time: '120s', cooking_time: '240s', description: "Cook banga Rice", public: true, user_id: 1)
+
+rails g erb:scaffold RecipeFood 

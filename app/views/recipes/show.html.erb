@@ -2,12 +2,15 @@
 
 <%= render @recipe %>
 <div class="container-fulid d-flex">
-  <%= link_to "GENERATE SHOPPING LIST", shopping_list_index_path(@recipe) %>
+  <%= link_to "GENERATE SHOPPING LIST", shopping_list_index_path %><br>
+ <%= link_to 'Add Ingredients', new_recipe_food_path(@recipe) %> 
    </button>
+  
       <%= render partial: 'modal', locals: { recipe_id: @recipe }  %>
       <%= link_to new_recipe_path(@recipe), :class => "btn
-      btn btn-outline-dark add mb-3" do %> Add Ingredients 
+      btn btn-outline-dark add mb-3" do %> 
     <% end %>
+
   </div>
   <hr class="my-1" />
 </div>
@@ -30,10 +33,9 @@
         <td><%= recipeFood.food.name%></th>
         <td><%= recipeFood.quantity%><%= recipeFood.food.measurement_unit  %></td>
         <td>$<%= recipeFood.quantity * recipeFood.food.price %></td>
-        <% if can? :destroy, @recipe %>
+        <% if current_user != nil  %>
           <td class="d-flex gap-3 justify-content-end">
-            <%=button_to "Delete", recipe_recipe_food_path(recipe_id: @recipe.id, id: recipeFood.id), method: :delete, class:"btn btn-danger"%>
-            <%=link_to "Modify", edit_recipe_recipe_food_path(recipe_id: @recipe.id, id:recipeFood.id), class:"btn btn-dark"%>
+            <%=button_to "Delete", recipe_foods_path(recipe_id: @recipe.id, id: recipeFood.id), method: :delete, class:"btn btn-danger"%>
           </td>
         <% end %>
       </tr>
