@@ -38,12 +38,7 @@ class Ability
     return unless user.admin?
 
     can :manage, :all
-    
   end
-  <span><%= link_to "New User" , new_user_path if can? :create, User %></span>
-  <% if cannot? :destroy , @user %>
-    <span class="permission-message">You aren't allowed to delete this user.</span>
-  <% end %>
 
   # Define abilities for the user here. For example:
   #

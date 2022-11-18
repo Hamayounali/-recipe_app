@@ -16,7 +16,7 @@ Metrics/MethodLength:
   Include:
     - "app/controllers/*"
     - "app/models/*"
-  Max: 20
+  Max: 40
 Metrics/AbcSize:
   Include:
     - "app/controllers/*"
@@ -60,3 +60,4 @@ Style/HashTransformValues:
   Enabled: false
 Style/EndOfLine:
   EnforcedStyle: lf
+  Enabled: false
