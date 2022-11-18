@@ -13,39 +13,42 @@
  *= require_tree .
  *= require_self
  */
- a {
-   text-decoration: none;
- }
 
- #recip  {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-around;
- }
+.newFood {
+  text-align: right;
+}
 
- .cardss {
-    display: grid;
-    grid-template-columns:  1fr 1fr;
-    border: 2px solid #333;
-    width: 100%;
+a {
+  text-decoration: none;
+}
 
- }
+#recip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
- /* public recipes starts here **/
+.cardss {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 2px solid #333;
+  width: 100%;
+}
+
+/* public recipes starts here **/
 #li-cards {
   display: grid;
-  grid-template-columns: 1fr ;
+  grid-template-columns: 1fr;
   grid-column-gap: 10px;
 }
 
 #card-body {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    border: 1.6px solid #333;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1.6px solid #333;
   grid-row-gap: 60px;
 }
 
 #card1 {
-    
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }

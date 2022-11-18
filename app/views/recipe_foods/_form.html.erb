@@ -13,19 +13,18 @@
 
   <div>
     <%= form.label :quantity, style: "display: block" %>
-    <%= form.number_field :quantity %>
+    <%= form.number_field :quantity, class: 'form-control' %>
   </div>
 
   <div>
     <%= form.label :food_id, style: "display: block" %>
-    <%= form.text_field :food_id %>
+    <%= form.text_field :food_id, class: 'form-control' %>
   </div>
 
   <div>
     <%= form.label :recipe_id, style: "display: block" %>
-    <%= form.text_field :recipe_id %>
+    <%= form.text_field :recipe_id, class: 'form-control' %>
   </div>
-
   <div>
     <%= form.submit %>
   </div>
