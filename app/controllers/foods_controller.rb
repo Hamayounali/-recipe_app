@@ -1,7 +1,6 @@
-# frozen_string_literal: true
-
 class FoodsController < ApplicationController
-  before_action :set_food, only: %i[show edit update destroy]
+  before_action :authenticate_user!
+  before_action :set_food, only: %i[index show edit update destroy]
 
   # GET /foods or /foods.json
   def index
@@ -9,7 +8,9 @@ class FoodsController < ApplicationController
   end
 
   # GET /foods/1 or /foods/1.json
-  def show; end
+  def show
+    @food = Food.find(params[:id])
+  end
 
   # GET /foods/new
   def new
@@ -17,7 +18,9 @@ class FoodsController < ApplicationController
   end
 
   # GET /foods/1/edit
-  def edit; end
+  def edit
+    @food = Food.find(params[:id])
+  end
 
   # POST /foods or /foods.json
   def create
@@ -36,6 +39,7 @@ class FoodsController < ApplicationController
 
   # PATCH/PUT /foods/1 or /foods/1.json
   def update
+    @food = Food.find(params[:id])
     respond_to do |format|
       if @food.update(food_params)
         format.html { redirect_to food_url(@food), notice: 'Food was successfully updated.' }
@@ -49,6 +53,7 @@ class FoodsController < ApplicationController
 
   # DELETE /foods/1 or /foods/1.json
   def destroy
+    @food = Food.find(params[:id])
     @food.destroy
 
     respond_to do |format|
@@ -61,7 +66,7 @@ class FoodsController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_food
-    @food = Food.find(params[:id])
+    @food = Food.find_by(id: params[:food_id])
   end
 
   # Only allow a list of trusted parameters through.

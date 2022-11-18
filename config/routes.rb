@@ -1,13 +1,19 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  # get 'recipe_food/quantity:integer'
-  root 'recipes#index'
-  resources :foods, only: %i[index create destroy]
-  resources :recipes, only: %i[index create show destroy]
-  resources :public_recipes, only: %i[index destroy]
-  resources :shopping_list, only: %i[index create destroy]
+  devise_for :users
+  devise_scope :user do
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  end
 
+  root to: 'recipes#index'
+
+  # get 'recipe_food/quantity:integer'
+  resources :foods
+  resources :recipes
+  resources :public_recipes
+  resources :shopping_list
+  resources :recipe_foods
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   # Defines the root path route ("/")
 end

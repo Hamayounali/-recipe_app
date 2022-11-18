@@ -1,6 +1,5 @@
-# frozen_string_literal: true
-
 class RecipesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_recipe, only: %i[index show edit update destroy]
 
   # GET /recipes or /recipes.json
@@ -19,7 +18,9 @@ class RecipesController < ApplicationController
   end
 
   # GET /recipes/1/edit
-  def edit; end
+  def edit
+    @recipe = Recipe.find(params[:id])
+  end
 
   # POST /recipes or /recipes.json
   def create
@@ -27,7 +28,7 @@ class RecipesController < ApplicationController
 
     respond_to do |format|
       if @recipe.save
-        format.html { redirect_to recipe_url(@recipe), notice: 'Recipe was successfully created.' }
+        format.html { redirect_to recipes_url(@recipe), notice: 'Recipe was successfully created.' }
         # format.json { render :show, status: :created, location: @recipe }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,6 +39,7 @@ class RecipesController < ApplicationController
 
   # PATCH/PUT /recipes/1 or /recipes/1.json
   def update
+    @recipe = Recipe.find(params[:id])
     respond_to do |format|
       if @recipe.update(recipe_params)
         format.html { redirect_to recipe_url(@recipe), notice: 'Recipe was successfully updated.' }
