@@ -4,18 +4,17 @@ RSpec.describe Recipe, type: :model do
   before(:all) do
     @user = User.create(
       name: 'Ambrose',
-        email: 'ambrisexyz@gmail.com',
-        password: '123456'
+      email: 'ambrisexyz@gmail.com',
+      password: '123456'
     ),
-    @recipe = Recipe.create(
-        name: 'Rice recipe',
-        preparation_time: '10s',
-        cooking_time: '20s',
-        description: 'Cook rice',
-        public: true,
-        user_id: 1
-
-    )
+            @recipe = Recipe.create(
+              name: 'Rice recipe',
+              preparation_time: '10s',
+              cooking_time: '20s',
+              description: 'Cook rice',
+              public: true,
+              user_id: 1
+            )
   end
 
   it '@recipe created should be valid' do

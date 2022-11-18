@@ -4,8 +4,8 @@ RSpec.describe User, type: :model do
   before(:all) do
     @user = User.new(
       name: 'Ambrose Isigba',
-        email: 'titi@gmail.com',
-        password: '123456'
+      email: 'titi@gmail.com',
+      password: '123456'
     )
   end
 
