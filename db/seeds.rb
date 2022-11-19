@@ -14,3 +14,6 @@ Recipe.create!(name: "Jollof Rice", preparation_time: '100s', cooking_time: '200
 Recipe.create!(name: "Banga Rice", preparation_time: '120s', cooking_time: '240s', description: "Cook banga Rice", public: true, user_id: 1)
 
 rails g erb:scaffold RecipeFood 
+RSpec.describe Movie, type: :model do
+    #tests go here
+  end
