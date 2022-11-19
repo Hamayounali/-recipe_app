@@ -1,0 +1,33 @@
+<div class="container">
+<div class="row newFood">
+
+  <%= link_to "New Food", new_food_path %> 
+
+</div>
+  <div id="foods">
+
+    <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Food</th>
+        <th>Measurement Unit</th>
+        <th>Unit Price</th>
+        <th>Details/Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    <% @foods.each do |food| %>   
+      <tr>
+       <td><%= food.name %> </td>
+        <td><%= food.measurement_unit %></td>
+        <td><%= food.price %></td>
+        <td> <%= link_to "Details and Actions", food %> </td>
+        
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  </div>
+</div>
+<%# <%= link_to "New food", new_food_path %>

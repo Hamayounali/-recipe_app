@@ -1,0 +1,20 @@
+<div class="container"> 
+<br>
+  <div class="row">
+  <div class="col-sm-6 offset-sm-3">
+    <div class="card">
+    <div class="card-header"><h4> New Food</h4></div>
+      <div class="card-body">
+
+      <%= render "form", food: @food %>
+
+      <br>
+
+      <div>
+        <%= link_to "Back to foods", foods_path %>
+      </div>
+    </div>
+    </div>
+    </div>
+  </div>
+</div>
