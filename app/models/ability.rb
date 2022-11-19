@@ -6,7 +6,7 @@ class Ability
     return unless user.present?
 
     can :create, Recipe
-    can :create, Ingredient
+    # can :create, Ingredient
     can :create, RecipeFood
     can :create, Food
 
@@ -19,9 +19,6 @@ class Ability
     can :destroy, RecipeFood do |rf|
       rf.try(:user) == user
     end
-    can :destroy, Ingredient do |ing|
-      ing.try(:user) == user
-    end
 
     can :update, Recipe do |rec|
       rec.try(:user) == user
@@ -32,10 +29,8 @@ class Ability
     can :update, RecipeFood do |rf|
       rf.try(:user) == user
     end
-    can :update, Ingredient do |ing|
-      ing.try(:user) == user
-    end
-    return unless user.admin?
+
+    # return unless user.admin?
 
     can :manage, :all
   end
