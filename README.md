@@ -56,11 +56,11 @@ To setup and install this sample AlFa Blog project, follow the below steps:
 - Twitter: [@Glorios12](https://twitter.com/Glorious851)
 - LinkedIn: [@Ambrose Isigba](https://www.linkedin.com/in/ambrose-isigba/)
 
-👤 **Ali**
+👤 **Hamayoun Ali**
 
-- GitHub: []()
-- LinkedIn: []()
-- Twitter: []()
+- GitHub: [@Hamayounali](https://github.com/Hamayounali)
+- Twitter: [@hamayounAli6](https://twitter.com/hamayounAli6)
+- LinkedIn: [Humayoon Ali](https://www.linkedin.com/in/humayoon-ali-663ba2239)
 
 
 ## 🤝 Contributing
